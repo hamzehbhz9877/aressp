@@ -1,0 +1,66 @@
+$header-color-dark:#ffffff;
+//
+//.dark{
+//  .header{
+//    &__left{
+//      &-menu{
+//        &.light{
+//          @apply hidden;
+//        }
+//        &.dark{
+//          @apply block md:hidden;
+//        }
+//      }
+//    }
+//  }
+//}
+//
+//.light{
+//  .header{
+//    &__left{
+//      &-menu{
+//        &.light{
+//          @apply  block md:hidden;
+//        }
+//        &.dark{
+//          @apply hidden;
+//        }
+//      }
+//    }
+//  }
+//}
+.header{
+  @apply  flex items-center justify-between py-[20px] text-c1  dark:text-[#{$header-color-dark}];
+  &__right{
+    @apply hidden items-center md:flex gap-[22px];
+    &-item{
+      @apply relative text-[20px];
+      &--active{
+        @apply font-bold;
+        &:after{
+          @apply content-[''] absolute top-[100%] h-[2px] w-full left-0 right-0 dark:bg-white bg-black rounded-[3px];
+        }
+      }
+    }
+  }
+  &__left{
+    @apply text-[20px] font-semibold;
+  }
+  &__mobile{
+    @apply transition ease-in-out duration-[.3s] opacity-0 z-10 w-full h-full items-center invisible fixed inset-0 flex flex-col justify-center gap-[20px] bg-[#{$header-color-dark}] dark:bg-c1;
+    &--active{
+    @apply visible opacity-100;
+    }
+    .header{
+      &__right{
+        @apply flex flex-col;
+      }
+      &__left{
+        @apply pb-[62px];
+      }
+    }
+    &-close{
+      @apply fixed bottom-[20px] z-20;
+    }
+  }
+}

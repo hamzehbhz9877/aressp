@@ -1,0 +1,4 @@
+.input-field{
+    @apply bg-[#FFFFFF] border border-solid border-gray-300 rounded-[8px] w-full
+    text-sm focus:ring-blue-500 focus:border-blue-500 block px-2 py-3;
+}

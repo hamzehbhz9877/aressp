@@ -1,0 +1,6 @@
+.search{
+@apply relative w-full sm:w-[300px];
+  &__icon{
+    @apply absolute right-3 top-[50%] transform translate-y-[-50%];
+  }
+}

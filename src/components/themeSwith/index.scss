@@ -1,0 +1,9 @@
+.themeSwitch{
+  @apply relative justify-between flex gap-[10px] w-[96px] h-[40px] rounded-[29px] bg-[#090D1F] dark:bg-white px-[16px];
+  img{
+    @apply cursor-pointer;
+  }
+  &__toggle{
+    @apply  dark:left-[16px] absolute top-[50%] translate-y-[-50%] right-[16px] dark:bg-[#090D1F] bg-white w-[24px] h-[24px] rounded-full;
+  }
+}

@@ -1,0 +1,24 @@
+.recentPosts{
+  @apply mb-[30px];
+  &__top{
+    @apply grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1  xl:grid-cols-2 gap-x-[32px] gap-y-[48px] pb-[60px];
+    &-right{
+      @apply flex gap-[32px] flex-col;
+    }
+    &-left{
+      .post{
+        &__image{
+          @apply w-[592px] h-[228px];
+        }
+      }
+    }
+  }
+  &__bottom{
+    .post{
+      @apply flex-col lg:flex-row #{!important};
+      &__image{
+        @apply w-full lg:w-[50%]  h-[246px] #{!important};
+      }
+    }
+  }
+}

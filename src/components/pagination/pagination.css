@@ -1,0 +1,40 @@
+.pagination {
+  margin-top: 40px;
+}
+
+.pagination__item:not(.prev, .next) {
+  margin: 0 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__item--active:not(.prev, .next) {
+  background-color: #63516E;
+  padding: 12px;
+  border-radius: 50%;
+  color: white;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.pagination__item.next {
+  margin-right: 15px;
+}
+
+.pagination__item.next.disabled img, .pagination__item.prev.disabled img {
+  width: 20px;
+  height: 20px;
+  user-select: none;
+}
+
+.pagination__item.prev {
+  margin-left: 15px;
+}
+
+.pagination__item.next, .pagination__item.prev {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=pagination.css.map */

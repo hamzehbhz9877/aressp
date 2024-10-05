@@ -1,0 +1,11 @@
+$footer-color-dark:#ffffff;
+
+.footer{
+  @apply flex  items-center  py-[20px];
+  &__social{
+    @apply flex  sm:flex-row flex-col-reverse text-center w-full sm:justify-start mx-auto gap-x-[22px] gap-y-[15px];
+    &-item{
+      @apply text-[20px] text-c1 dark:text-[#{$footer-color-dark}] ;
+    }
+  }
+}

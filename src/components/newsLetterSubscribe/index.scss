@@ -1,0 +1,23 @@
+
+
+.newsLetterSubscribe{
+  @apply my-[32px] mx-auto text-center max-w-[768px];
+  span{
+    @apply  text-[16px]  text-[#7F56D9] font-semibold;
+  }
+  h3{
+    @apply dark:text-white py-[12px] text-[34px] md:text-[48px] font-semibold;
+  }
+  p{
+    @apply dark:text-c1-dark text-c2 text-[16px] pt-[24px] pb-[40px];
+  }
+  button{
+    @apply bg-[#7F56D9] text-white py-[12px] px-[20px] rounded-[8px];
+  }
+  &__form{
+    @apply flex justify-center items-baseline gap-[16px] px-2;
+    span{
+      @apply  text-[14px] font-light dark:text-c1-dark text-c2;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+$pagination-color--active: "rgba(127,86,217,0.2)";
+$pagination-bgColor--active-color: #7F56D9;
+
+$pagination-bgColor--active-color-dark: #FFFFFF;
+
+
+.pagination {
+  @apply my-[20px] gap-[20px] flex flex-col md:flex-row items-center justify-center md:justify-between;
+  &__list {
+    @apply flex items-center;
+  }
+
+  .next, .prev {
+    @apply flex gap-[8px] cursor-pointer dark:text-white;
+    &.disabled {
+      @apply cursor-not-allowed;
+    }
+  }
+
+  &__link {
+    @apply w-full flex justify-center;
+  }
+
+  &__item {
+    @apply text-c2 w-[40px] h-[40px] cursor-pointer flex items-center justify-between;
+    &--active {
+      @apply bg-[#{$pagination-color--active}] text-[#{$pagination-bgColor--active-color}] dark:bg-[#{$pagination-bgColor--active-color-dark}] rounded-[8px];
+    }
+  }
+}
+

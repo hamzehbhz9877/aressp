@@ -1,0 +1,19 @@
+
+
+.about {
+  h2 {
+    @apply text-[24px] mb-[12px] dark:text-white  text-black mt-[32px];
+  }
+
+  p {
+    @apply dark:text-c1-dark text-c2  text-[16px];
+  }
+
+  ul {
+    @apply list-inside pl-2;
+
+    li {
+      @apply text-[16px] list-disc dark:text-c1-dark text-c2;
+    }
+  }
+}

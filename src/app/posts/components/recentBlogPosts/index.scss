@@ -1,0 +1,9 @@
+.recentBlogPost{
+  @apply hidden lg:flex flex-col gap-[32px];
+  .post{
+    @apply w-[364px];
+    &__image{
+      @apply w-[342px] h-[204px];
+    }
+  }
+}
