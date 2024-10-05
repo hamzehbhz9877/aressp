@@ -7,7 +7,7 @@ const PostDetailsSkeletonUi = () => {
              className="rounded animate-pulse">
             <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-48 mb-4"></div>
             <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-full mb-4"></div>
-            <div className="flex items-center justify-center !w-[100%] md:w-[741px] h-[463px] sm:h-[375px] mb-4 bg-gray-300 rounded dark:bg-gray-700">
+            <div className="flex items-center justify-center !w-[100%] md:w-[741px] h-[263px] sm:h-[375px] mb-4 bg-gray-300 rounded dark:bg-gray-700">
                 <svg className="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true"
                      xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 20">
                     <path
