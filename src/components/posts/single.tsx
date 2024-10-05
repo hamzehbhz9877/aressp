@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from "next/link";
 import PostImage from "@/assets/images/post.png"
-import TitleIcon from "@/assets/images/Icon wrap.png"
+import TitleIcon from "@/assets/images/arrow-up-right.svg"
 import TitleIconDark from "@/assets/images/postIconDark.svg"
 import Image from "next/image";
 
