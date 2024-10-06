@@ -22,23 +22,23 @@ const PostDetails = () => {
     const { data ,isError,isFetching} = useSuspenseQuery(postOption(+params.id))
 
 
-    if (isFetching)
+    // if (isFetching)
         return <div className="postDetail"><PostDetailsSkeletonUi/></div>
 
     if (isError)
         return <div>fetch blog details failed</div>
 
-    return (
-        <div className="post postDetail">
-            <span className={"post__author"}>Alec Whitten • 1 Jan 2023</span>
-            <div className="post__title">
-                <h2>{data?data?.title:""}</h2>
-            </div>
-            <Image className="w-full" src={PostImage} alt={data?.title as string} width={778} height={426}/>
-            <p className={"post__description"}>{data?data?.body:""}</p>
-            <Tags/>
-        </div>
-    );
+    // return (
+    //     <div className="post postDetail">
+    //         <span className={"post__author"}>Alec Whitten • 1 Jan 2023</span>
+    //         <div className="post__title">
+    //             <h2>{data?data?.title:""}</h2>
+    //         </div>
+    //         <Image className="w-full" src={PostImage} alt={data?.title as string} width={778} height={426}/>
+    //         <p className={"post__description"}>{data?data?.body:""}</p>
+    //         <Tags/>
+    //     </div>
+    // );
 };
 
 export default PostDetails;
