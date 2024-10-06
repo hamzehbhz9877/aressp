@@ -25,7 +25,7 @@ const AllPosts = () => {
     const [search, setSearch] = useState('')
 
 
-    const { data ,isError,isFetching} = useSuspenseQuery(postsOption(page,search))
+    const { data ,isError,isRefetching} = useSuspenseQuery(postsOption(page,search))
 
 
 
@@ -46,14 +46,14 @@ const AllPosts = () => {
 
     // we can prefetch next page
 
-    // React.useEffect(() => {
-    //     if (data.posts.length===6) {
-    //         queryClient.prefetchQuery({
-    //             queryKey: ['projects', page + 1],
-    //             queryFn: () => getPosts(page + 1),
-    //         })
-    //     }
-    // }, [data.posts, queryClient])
+    React.useEffect(() => {
+        if (data.pages>page) {
+            queryClient.prefetchQuery({
+                queryKey: ['projects', page + 1],
+                queryFn: () => getPosts(page + 1),
+            })
+        }
+    }, [data.posts, queryClient])
 
     return (
         <div className="allPosts my-[30px]" id="posts">
@@ -64,7 +64,7 @@ const AllPosts = () => {
                         placeholder={"search ..."}/>
             </div>
             {isError ? <div>fetch posts failed</div> :
-                isFetching ? <div className="posts">{new Array(6).fill(0).map((_, index: number) =>
+                isRefetching ? <div className="posts">{new Array(6).fill(0).map((_, index: number) =>
                     <PostSkeletonCol key={index}/>)}</div> : data.posts?.length > 0 ? <PostList posts={data.posts}/> : search!=='' && data.posts?.length==0? <strong className="dark:text-white">No Result</strong>:""}
 
             <div className={"mt-[50px]"}>

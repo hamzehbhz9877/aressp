@@ -8,8 +8,6 @@ export const getRecentPosts = async () => {
     return data.data[0]
 }
 export const getPosts = async (page:number, search:string = '') => {
-
-
     // simulate pagination backend
     const queryCount = await instant.get(`/posts?title_like=${search}`)
     const skip = (page - 1) * 6
