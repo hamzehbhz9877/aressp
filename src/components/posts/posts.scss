@@ -50,7 +50,7 @@ $post-title-color-dark: #FFFFFF;
       }
 
       &__tags{
-        @apply mt-auto;
+        @apply pt-[24px] mt-auto;
       }
       &__title {
         h2 {
