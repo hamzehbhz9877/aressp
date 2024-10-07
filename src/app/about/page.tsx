@@ -4,7 +4,7 @@ import About from "@/app/about/components/about";
 
 const Page = () => {
     return (
-        <div className="abput-page">
+        <div className="about-page">
             <PageTitle title={'HAMZEH'}/>
             <About/>
         </div>

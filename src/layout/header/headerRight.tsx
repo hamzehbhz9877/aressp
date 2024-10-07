@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import ThemeSwitch from "@/components/themeSwith";
+import ThemeSwitch from "../../components/themeSwitch";
 import {usePathname} from "next/navigation";
 import IsActiveLink from "../../hooks/useActiveLink";
 import UseActiveLink from "../../hooks/useActiveLink";
