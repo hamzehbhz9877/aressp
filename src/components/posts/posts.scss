@@ -46,9 +46,12 @@ $post-title-color-dark: #FFFFFF;
         @apply pt-0 ;
       }
       &__content{
-        @apply flex-grow;
+        @apply flex flex-col flex-grow;
       }
 
+      &__tags{
+        @apply mt-auto;
+      }
       &__title {
         h2 {
           @apply text-[16px] #{!important};

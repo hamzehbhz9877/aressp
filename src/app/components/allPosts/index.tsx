@@ -55,6 +55,7 @@ const AllPosts = () => {
         }
     }, [data.posts, queryClient])
 
+
     return (
         <div className="allPosts my-[30px]" id="posts">
             <div className="flex justify-between items-center gap-3 flex-wrap mb-[32px]">
